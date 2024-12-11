@@ -1,42 +1,12 @@
-# Guía de Configuración del Proyecto y Uso de Git
-
-Esta guía documenta los pasos realizados para configurar el proyecto **proyecto-patrones**, gestionar los archivos con Git, y subir el repositorio a un remoto.
-
----
-
 ## 1. Creación de la Estructura Inicial del Proyecto
 
 Se creó la estructura de archivos y directorios inicial para el proyecto utilizando los siguientes comandos:
 
-```bash
 mkdir -p proyecto-patrones/{docs,scripts,images,temp}
 touch proyecto-patrones/docs/{manual.txt,guia.md,readme.txt}
 touch proyecto-patrones/scripts/{app.js,utils.py,config.js}
 touch proyecto-patrones/images/{logo.png,icon.jpg,banner.gif}
 touch proyecto-patrones/temp/{pruebas.log,debug.txt,draft.md}
-```
-
-Esto generó la siguiente estructura:
-
-```
-proyecto-patrones/
-├── docs/
-│   ├── manual.txt
-│   ├── guia.md
-│   ├── readme.txt
-├── scripts/
-│   ├── app.js
-│   ├── utils.py
-│   ├── config.js
-├── images/
-│   ├── logo.png
-│   ├── icon.jpg
-│   ├── banner.gif
-├── temp/
-    ├── pruebas.log
-    ├── debug.txt
-    ├── draft.md
-```
 
 ---
 
@@ -45,19 +15,10 @@ proyecto-patrones/
 ### Comandos Utilizados:
 
 1. **Inicializar el repositorio:**
-   ```bash
    git init
-   ```
 
-2. **Agregar la estructura vacía al área de preparación:**
-   ```bash
-   git add .
-   ```
-
-3. **Realizar el primer commit:**
-   ```bash
+2. **Realizar el primer commit:**
    git commit -m "Commit inicial con la estructura de directorios vacía."
-   ```
 
 Resultado: La estructura de directorios se encuentra bajo control de versiones, pero no se han añadido archivos específicos aún.
 
@@ -68,58 +29,38 @@ Resultado: La estructura de directorios se encuentra bajo control de versiones, 
 ### Ejercicio 1: Añadir Archivos `.txt` de la Carpeta `docs/`
 
 1. **Añadir los archivos `.txt` de `docs/` al área de preparación:**
-   ```bash
    git add docs/*.txt
-   ```
 
 2. **Verificar el estado:**
-   ```bash
    git status
-   ```
 
 3. **Hacer un commit:**
-   ```bash
    git commit -m "Añadidos los archivos .txt de la carpeta docs."
-   ```
 
 ### Ejercicio 2: Añadir Archivos `.js` de `scripts/` Excluyendo `config.js`
 
 1. **Añadir los archivos `.js` de `scripts/`:**
-   ```bash
    git add scripts/*.js
-   ```
 
 2. **Excluir `config.js`:**
-   ```bash
    git reset scripts/config.js
-   ```
 
 3. **Verificar el estado:**
-   ```bash
    git status
-   ```
 
 4. **Hacer un commit:**
-   ```bash
    git commit -m "Añadidos los archivos .js de scripts excluyendo config.js."
-   ```
 
 ### Ejercicio 3: Añadir Imágenes Excepto las que Terminan en `.gif`
 
 1. **Añadir las imágenes `.png` y `.jpg`:**
-   ```bash
    git add images/*.png images/*.jpg
-   ```
 
 2. **Verificar el estado:**
-   ```bash
    git status
-   ```
 
 3. **Hacer un commit:**
-   ```bash
    git commit -m "Añadidas imágenes excepto las que terminan en .gif."
-   ```
 
 ---
 
@@ -130,11 +71,7 @@ Resultado: La estructura de directorios se encuentra bajo control de versiones, 
 1. **Crear un repositorio remoto (por ejemplo, en GitHub).**
 
 2. **Configurar el remoto en el repositorio local:**
-   ```bash
    git remote add origin <URL-del-repositorio>
-   ```
 
 3. **Subir los cambios al repositorio remoto:**
-   ```bash
    git push -u origin main
-   ```
